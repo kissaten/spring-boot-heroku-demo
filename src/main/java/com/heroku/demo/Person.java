@@ -31,7 +31,7 @@ public class Person {
     }
 
     public void setLastName(String last) {
-        this.lastName = last;
+        this.last = last;
     }
 
 }
