@@ -69,6 +69,7 @@
             <form th:object="${insertRecord}" method="POST">
                 <div class="form-group">
                     <label for="testing">Testing Record to insert</label>
+                    <input id="data" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{data}" />
                     <input id="testing" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{testing}" />
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
