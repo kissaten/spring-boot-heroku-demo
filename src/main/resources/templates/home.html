@@ -66,6 +66,42 @@
         </div>
     </div>
     
+    
+    
+    
+    <hr /><hr /><hr />
+
+    <div class="row">
+        <div class="col-md-12 col-lg-6">
+            <form th:object="${insertRecord}" method="POST">
+                <div class="form-group">
+                    <label>Data Record to insert</label>
+                    <input id="data" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{data}" />
+                    <input id="testing" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{testing}" />
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    <hr />
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Records Test</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="record : ${records}">
+                        <td th:text="${record.data}">Some text</td><td th:text="${record.testing}">Some text</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
 
     
 
