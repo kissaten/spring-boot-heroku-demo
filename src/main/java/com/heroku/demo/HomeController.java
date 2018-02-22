@@ -40,7 +40,7 @@ public class HomeController {
     @RequestMapping(method = RequestMethod.GET)
     public String home(ModelMap model) {
         List<Person> persons = repository.findAll();
-        model.addAttribute("person", persons);
+        model.addAttribute("persons", persons);
         model.addAttribute("insertPerson", new Person());
         return "home";
     }
