@@ -30,7 +30,7 @@ public class Person {
         return last;
     }
 
-    public void setLastName(String last) {
+    public void setLast(String last) {
         this.last = last;
     }
 
