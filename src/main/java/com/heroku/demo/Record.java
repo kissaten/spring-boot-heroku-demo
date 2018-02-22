@@ -17,6 +17,7 @@ public class Record {
     @NotEmpty
     private String data;
     
+    @NotEmpty
     private String testing;
 
     public String getData() {
