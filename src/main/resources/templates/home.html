@@ -30,9 +30,43 @@
         <h1>Spring Boot Heroku Example</h1>
     </div>
     
-
+     <div class="row">
+        <div class="col-md-12 col-lg-6">
+            <form th:object="${insertPerson}" method="POST">
+                <div class="form-group">
+                    <label>Person Record to insert</label>
+                    <input id="first" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{first}" />
+                    <input id="last" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{last}" />
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+    
     
 
+    <hr />
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Persons Records</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="person : ${persons}">
+                        <td th:text="${person.first}">Some text</td><td th:text="${person.first}">Some text</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    
+    
+    
+    <hr /><hr /><hr />
 
     <div class="row">
         <div class="col-md-12 col-lg-6">
