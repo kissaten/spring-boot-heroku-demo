@@ -34,8 +34,8 @@
         <div class="col-md-12 col-lg-6">
             <form th:object="${insertRecord}" method="POST">
                 <div class="form-group">
-                    <label for="data">Record to insert</label>
-                    <input id="data" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{data}" />
+                    <label for="testing">Record to insert</label>
+                    <input id="testing" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{testing}" />
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
@@ -48,12 +48,12 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Records</th>
+                        <th>Records Test</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr th:each="record : ${records}">
-                        <td th:text="${record.data}">Some text</td>
+                        <td th:text="${record.testing}">Some text</td>
                     </tr>
                 </tbody>
             </table>
