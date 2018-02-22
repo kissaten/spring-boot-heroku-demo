@@ -37,10 +37,11 @@
 
     <div class="row">
         <div class="col-md-12 col-lg-6">
-            <form th:object="${insertRecord}" method="POST">
+            <form th:object="${insertPerson}" method="POST">
                 <div class="form-group">
-                    <label for="data">Data Record to insert</label>
-                    <input id="data" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{data}" />
+                    <label>Data Record to insert</label>
+                    <input id="firstname" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{firstname}" />
+                    <input id="lastname" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{lastname}" />
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
@@ -57,50 +58,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="record : ${records}">
-                        <td th:text="${record.data}">Some text</td>
+                    <tr th:each="person : ${persons}">
+                        <td th:text="${person.firstname}">Some text</td><td th:text="${person.lastname}">Some text</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-    
-    
-     <hr />
-     <hr />
-    
-    <div class="row">
-        <div class="col-md-12 col-lg-6">
-            <form th:object="${insertRecord}" method="POST">
-                <div class="form-group">
-                    <label for="testingteam">Testing Team Record to insert</label>
-                    <input id="data" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{data}" />
-                    <input id="testingteam" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{testingteam}" />
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-        </div>
-    </div>
-    
     
 
-    <hr />
-    <div class="row">
-        <div class="col-sm-12">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Records Test</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr th:each="record : ${records}">
-                        <td th:text="${record.testingteam}">Some text</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+    
+
 </div>
 
 <!-- Latest compiled and minified JavaScript -->

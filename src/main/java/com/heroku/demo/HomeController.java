@@ -30,24 +30,24 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/")
 public class HomeController {
 
-    private RecordRepository repository;
+    private PersonRepository repository;
 
     @Autowired
-    public HomeController(RecordRepository repository) {
+    public HomeController(PersonRepository repository) {
         this.repository = repository;
     }
 
     @RequestMapping(method = RequestMethod.GET)
     public String home(ModelMap model) {
-        List<Record> records = repository.findAll();
-        model.addAttribute("records", records);
-        model.addAttribute("insertRecord", new Record());
+        List<Person> persons = repository.findAll();
+        model.addAttribute("persons", persons);
+        model.addAttribute("insertPerson", new Person());
         return "home";
     }
 
     @RequestMapping(method = RequestMethod.POST)
     public String insertData(ModelMap model, 
-                             @ModelAttribute("insertRecord") @Valid Record record,
+                             @ModelAttribute("insertPerson") @Valid Person record,
                              BindingResult result) {
         if (!result.hasErrors()) {
             repository.save(record);

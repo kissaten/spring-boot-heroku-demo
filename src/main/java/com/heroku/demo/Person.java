@@ -15,25 +15,25 @@ public class Person {
     private long id;
     
     @NotEmpty
-    private String first;
+    private String firstname;
     
     @NotEmpty
-    private String last;
+    private String lastname;
 
-    public String getFirst() {
-        return first;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirst(String first) {
-        this.first = first;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
     
-    public String getLast() {
-        return last;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLast(String last) {
-        this.last = last;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
 }
