@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
-public class Record {
+public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
