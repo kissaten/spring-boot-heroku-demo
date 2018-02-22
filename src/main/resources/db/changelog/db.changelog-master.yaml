@@ -19,7 +19,7 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: testingTeam
+                  name: testingteam
                   type: varchar(255)
                   constraints:
                     nullable: false
