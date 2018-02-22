@@ -31,7 +31,7 @@ public class Record {
         return testing;
     }
 
-    public void setData(String testing) {
+    public void setTesting(String testing) {
         this.testing = testing;
     }
 
