@@ -30,13 +30,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/")
 public class HomeController {
 
-    private PersonRepository repository;
+   // private PersonRepository repository;
     private RecordRepository recordRepository;
 
-    @Autowired
-    public HomeController(PersonRepository repository) {
-        this.repository = repository;
-    }
+//    @Autowired
+//    public HomeController(PersonRepository repository) {
+//        this.repository = repository;
+//    }
     
     @Autowired
     public HomeController(RecordRepository recordRepository) {
@@ -45,9 +45,9 @@ public class HomeController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String home(ModelMap model) {
-        List<Person> persons = repository.findAll();
-        model.addAttribute("persons", persons);
-        model.addAttribute("insertPerson", new Person());
+//        List<Person> persons = repository.findAll();
+//        model.addAttribute("persons", persons);
+//        model.addAttribute("insertPerson", new Person());
         
         
         List<Record> records = recordRepository.findAll();
@@ -58,14 +58,14 @@ public class HomeController {
         return "home";
     }
 
-    @RequestMapping(method = RequestMethod.POST)
-    public String insertData(ModelMap model, @ModelAttribute("insertPerson") @Valid Person record,
-                             BindingResult result) {
-        if (!result.hasErrors()) {
-            repository.save(record);
-        }
-        return home(model);
-    }
+//    @RequestMapping(method = RequestMethod.POST)
+//    public String insertData(ModelMap model, @ModelAttribute("insertPerson") @Valid Person record,
+//                             BindingResult result) {
+//        if (!result.hasErrors()) {
+//            repository.save(record);
+//        }
+//        return home(model);
+//    }
     
     @RequestMapping(method = RequestMethod.POST)
     public String insertData1(ModelMap model, @ModelAttribute("insertRecord") @Valid Record record,
