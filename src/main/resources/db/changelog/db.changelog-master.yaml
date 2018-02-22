@@ -18,3 +18,8 @@ databaseChangeLog:
                   type: varchar(255)
                   constraints:
                     nullable: false
+              - column:
+                  name: testing
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
