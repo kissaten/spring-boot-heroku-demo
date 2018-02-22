@@ -34,12 +34,12 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: firstName
+                  name: first
                   type: varchar(255)
                   constraints:
                     nullable: false
               - column:
-                  name: lastName
+                  name: last
                   type: varchar(255)
                   constraints:
                     nullable: false

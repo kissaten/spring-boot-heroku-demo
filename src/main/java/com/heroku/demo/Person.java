@@ -14,24 +14,24 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     
-    private String firstName;
+    private String first;
     
-    private String lastName;
+    private String last;
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirst() {
+        return first;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirst(String first) {
+        this.first = first;
     }
     
-    public String getLastName() {
+    public String getLast() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastName(String last) {
+        this.lastName = last;
     }
 
 }
