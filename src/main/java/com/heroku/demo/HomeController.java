@@ -50,7 +50,7 @@ public class HomeController {
         model.addAttribute("insertPerson", new Person());
         
         
-        List<Record> records = repository.findAll();
+        List<Record> records = recordRepository.findAll();
         model.addAttribute("records", records);
         model.addAttribute("insertRecord", new Record());
         
