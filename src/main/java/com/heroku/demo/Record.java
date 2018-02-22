@@ -33,7 +33,7 @@ public class Record {
     }
 
     public void setTesting(String testing) {
-        this.testingteam = testing;
+        this.testing = testing;
     }
 
 }
