@@ -14,8 +14,10 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     
+    @NotEmpty
     private String first;
     
+    @NotEmpty
     private String last;
 
     public String getFirst() {

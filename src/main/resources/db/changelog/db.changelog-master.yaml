@@ -4,26 +4,6 @@ databaseChangeLog:
       author: jkutner
       changes:
         - createTable:
-            tableName: record
-            columns:
-              - column:
-                  name: id
-                  type: int
-                  autoIncrement: true
-                  constraints:
-                    primaryKey: true
-                    nullable: false
-              - column:
-                  name: data
-                  type: varchar(255)
-                  constraints:
-                    nullable: false
-              - column:
-                  name: testing
-                  type: varchar(255)
-                  constraints:
-                    nullable: false
-        - createTable:
             tableName: person
             columns:
               - column:
