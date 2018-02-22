@@ -18,7 +18,7 @@ public class Record {
     private String data;
     
     @NotEmpty
-    private String testingteam;
+    private String testing;
 
     public String getData() {
         return data;
@@ -28,12 +28,12 @@ public class Record {
         this.data = data;
     }
     
-    public String getTestingteam() {
-        return testingteam;
+    public String getTesting() {
+        return testing;
     }
 
-    public void setTestingteam(String testingteam) {
-        this.testingteam = testingteam;
+    public void setTesting(String testing) {
+        this.testingteam = testing;
     }
 
 }

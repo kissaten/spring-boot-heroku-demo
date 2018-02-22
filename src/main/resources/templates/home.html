@@ -73,9 +73,9 @@
         <div class="col-md-12 col-lg-6">
             <form th:object="${insertRecord}" method="POST">
                 <div class="form-group">
-                    <label for="testingteam">Testing Team Record to insert</label>
+                    <label for="testing">Testing Team Record to insert</label>
                     <input id="data" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{data}" />
-                    <input id="testingteam" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{testingteam}" />
+                    <input id="testing" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{testing}" />
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
@@ -95,7 +95,7 @@
                 </thead>
                 <tbody>
                     <tr th:each="record : ${records}">
-                        <td th:text="${record.testingteam}">Some text</td>
+                        <td th:text="${record.testing}">Some text</td>
                     </tr>
                 </tbody>
             </table>
