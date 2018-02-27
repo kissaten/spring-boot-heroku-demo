@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.heroku.demo.*;
 
 @Controller
-@RequestMapping("/test")
+@RequestMapping("/test/")
 public class TestController {
 
     private PersonRepository personRepository;
