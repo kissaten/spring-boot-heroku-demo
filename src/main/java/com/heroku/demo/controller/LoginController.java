@@ -34,7 +34,7 @@ public class LoginController {
     private PersonRepository personRepository;
 
     @Autowired
-    public TestController(PersonRepository personRepository) {
+    public LoginController(PersonRepository personRepository) {
         this.personRepository = personRepository;
     }
     
