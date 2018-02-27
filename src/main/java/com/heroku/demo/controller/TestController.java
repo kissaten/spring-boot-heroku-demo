@@ -52,6 +52,6 @@ public class TestController {
         if (!result.hasErrors()) {
         	personRepository.save(person);
         }
-        return test(model);
+        return home(model);
     }
 }
