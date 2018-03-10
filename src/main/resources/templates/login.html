@@ -35,6 +35,28 @@
 <button type="button" class="btn btn-link">Link</button>
 
 
+<form class="form-auth-small" action="userlogin"  method="POST" modelAttribute="User">
+								<div class="form-group">
+									<label for="signin-email" class="control-label sr-only">Email</label>
+									<input type="email" name="email" class="form-control" id="email" value="samuel.gold@domain.com" placeholder="Email">
+								</div>
+								<div class="form-group">
+									<label for="signin-password" class="control-label sr-only">Password</label>
+									<input type="password" name="password" class="form-control" id="password" value="" placeholder="Password">
+								</div>
+								<div class="form-group clearfix">
+									<label class="fancy-checkbox element-left">
+										<input type="checkbox">
+										<span>Remember me</span>
+									</label>
+								</div>
+								<button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
+								<div class="bottom">
+									<span class="helper-text"><i class="fa fa-lock"></i> <a href="#">Forgot password?</a></span>
+								</div>
+							</form>
+
+
    
 </div>
 
