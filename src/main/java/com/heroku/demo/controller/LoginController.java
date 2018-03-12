@@ -47,10 +47,10 @@ public class LoginController {
     }
     
     @RequestMapping(value = "/userlogin", method = RequestMethod.POST)
-	public ModelAndView userLogin(User user) {
+	public ModelAndView userLogin(Person person) {
 		ModelAndView model = new ModelAndView("home");
-			System.out.println("userlogin============"+user.getEmail());
-			System.out.println("userlogin============"+user.getPassword());
+			System.out.println("userlogin============"+person.getFirstname());
+			System.out.println("userlogin============"+person.getLastname());
 			return model;
 	}
 	

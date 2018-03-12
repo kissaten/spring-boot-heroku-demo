@@ -39,8 +39,8 @@
 <form th:object="${user}" class="form-horizontal" id="add-owner-form" action="login/userlogin" method="post">
     <div class="form-group has-feedback">
       
-      <input th:with="text='email'" type="input" th:text="email" value="test@test.com" name="email" />
-      <input th:with="text='password'" type="input" th:text="password" value="test@test.com" name="password" />
+      <input th:with="text='firstname'" type="input" th:text="firstname" value="test@test.com" name="firstname" />
+      <input th:with="text='lastname'" type="input" th:text="lastname" value="test@test.com" name="lastname" />
     </div>
      <button th:with="text='userlogin'" class="btn btn-default" type="submit" th:text="userlogin">Add Owner</button>
           
