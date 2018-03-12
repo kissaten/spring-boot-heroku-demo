@@ -47,9 +47,16 @@ public class LoginController {
     
     @RequestMapping(value = "/userlogin", method = RequestMethod.POST)
 	public ModelAndView userLogin(Person person) {
-		ModelAndView model = new ModelAndView("home");
+		ModelAndView model = new ModelAndView("test");
 			System.out.println("userlogin============"+person.getFirstname());
 			System.out.println("userlogin============"+person.getLastname());
+			
+			List<Person> persons = new ArrayList<Person>();
+			persons.add(person);
+	        model.addAttribute("persons", persons);
+	        model.addAttribute("insertPerson", new Person());
+			
+			
 			return model;
 	}
 	
