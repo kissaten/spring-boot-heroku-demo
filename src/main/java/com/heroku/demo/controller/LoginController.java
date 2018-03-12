@@ -51,12 +51,15 @@ public class LoginController {
 			System.out.println("userlogin============"+person.getFirstname());
 			System.out.println("userlogin============"+person.getLastname());
 			
-			List<Person> persons = new ArrayList<Person>();
-			persons.add(person);
+			
+	        if (person.getFirstname() != '' && person.getLastname() != '') {
+	        	personRepository.save(person);
+	        }
+			
+	        List<Person> persons = personRepository.findAll();
 	        model.addAttribute("persons", persons);
 	        model.addAttribute("insertPerson", new Person());
-			
-			return model;
+	        return model;
 	}
 	
 	
