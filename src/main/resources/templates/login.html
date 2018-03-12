@@ -36,7 +36,7 @@
 
 
 
-<form th:object="${user}" class="form-horizontal" id="add-owner-form" action="userlogin" method="post">
+<form th:object="${user}" class="form-horizontal" id="add-owner-form" action="login/userlogin" method="post">
     <div class="form-group has-feedback">
       
       <input th:with="text='email'" type="input" th:text="email" value="test@test.com" name="email" />

@@ -25,6 +25,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.finance.model.User;
 import com.heroku.demo.*;
 
 @Controller
@@ -42,6 +45,16 @@ public class LoginController {
     public String home(ModelMap model) {
        return "login";
     }
+    
+    @RequestMapping(value = "/userlogin", method = RequestMethod.POST)
+	public ModelAndView userLogin(User user) {
+		ModelAndView model = new ModelAndView("home");
+			System.out.println("userlogin============"+user.getEmail());
+			System.out.println("userlogin============"+user.getPassword());
+			return model;
+	}
+	
+	
 
 //    @RequestMapping(method = RequestMethod.POST)
 //    public String insertData(ModelMap model, @ModelAttribute("insertPerson") @Valid Person person,
