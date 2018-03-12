@@ -56,7 +56,6 @@ public class LoginController {
 	        model.addAttribute("persons", persons);
 	        model.addAttribute("insertPerson", new Person());
 			
-			
 			return model;
 	}
 	
