@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.heroku.demo;
+package com.heroku.demo.controller;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -25,53 +25,32 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import com.heroku.demo.*;
 
 @Controller
-@RequestMapping("/")
-public class HomeController {
+@RequestMapping("/test")
+public class TestController {
 
-   // private PersonRepository repository;
-    private RecordRepository recordRepository;
+    private PersonRepository personRepository;
 
-//    @Autowired
-//    public HomeController(PersonRepository repository) {
-//        this.repository = repository;
-//    }
-    
     @Autowired
-    public HomeController(RecordRepository recordRepository) {
-        this.recordRepository = recordRepository;
+    public TestController(PersonRepository personRepository) {
+        this.personRepository = personRepository;
     }
-
+    
     @RequestMapping(method = RequestMethod.GET)
     public String home(ModelMap model) {
-//        List<Person> persons = repository.findAll();
-//        model.addAttribute("persons", persons);
-//        model.addAttribute("insertPerson", new Person());
-        
-        
-        List<Record> records = recordRepository.findAll();
-        model.addAttribute("records", records);
-        model.addAttribute("insertRecord", new Record());
-        
-        
-        return "home";
+        List<Person> persons = personRepository.findAll();
+        model.addAttribute("persons", persons);
+        model.addAttribute("insertPerson", new Person());
+        return "test";
     }
 
-//    @RequestMapping(method = RequestMethod.POST)
-//    public String insertData(ModelMap model, @ModelAttribute("insertPerson") @Valid Person record,
-//                             BindingResult result) {
-//        if (!result.hasErrors()) {
-//            repository.save(record);
-//        }
-//        return home(model);
-//    }
-    
     @RequestMapping(method = RequestMethod.POST)
-    public String insertData(ModelMap model, @ModelAttribute("insertRecord") @Valid Record record,
+    public String insertData(ModelMap model, @ModelAttribute("insertPerson") @Valid Person person,
                              BindingResult result) {
         if (!result.hasErrors()) {
-        	recordRepository.save(record);
+        	personRepository.save(person);
         }
         return home(model);
     }

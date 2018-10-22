@@ -13,8 +13,12 @@ public class Record {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    
     @NotEmpty
     private String data;
+    
+    @NotEmpty
+    private String testingteam;
 
     public String getData() {
         return data;
@@ -22,6 +26,14 @@ public class Record {
 
     public void setData(String data) {
         this.data = data;
+    }
+    
+    public String getTestingteam() {
+        return testingteam;
+    }
+
+    public void setTestingteam(String testingteam) {
+        this.testingteam = testingteam;
     }
 
 }
